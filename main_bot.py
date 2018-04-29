@@ -1,5 +1,3 @@
-pip install -U discord.py
-
 import discord
 import logging
 import logging.config
