@@ -1,4 +1,4 @@
-python3 -m pip install -U discord.py
+pip install -U discord.py
 import discord
 import logging
 import logging.config
