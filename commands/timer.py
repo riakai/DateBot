@@ -14,14 +14,14 @@ class Timer:
         self.time_dict = SqliteDict('./time.db', autocommit=True)
         if "start_date" in self.time_dict:
             self.bot.scheduler.add_job(func=self.update_time,
-                                       trigger=IntervalTrigger(seconds=24000, start_date=self.time_dict["first_time"]),
+                                       trigger=IntervalTrigger(seconds=10800, start_date=self.time_dict["first_time"]),
                                        args=[self.time_dict["start_date"], self.time_dict["made_time"],
                                              self.time_dict["channel"]])
 
     async def update_time(self, start, made, channel):
         time_diff = datetime.datetime.now() - start
-        t_cycle = time_diff.total_seconds() // 24000 + made
-        # A sweep is 100 stages, a stage is 10 cycles, and a cycle is 24000 seconds
+        t_cycle = time_diff.total_seconds() // 10800 + made
+        # A sweep is 100 stages, a stage is 10 cycles, and a cycle is 10800 seconds
         t_stage, cycle = (t_cycle // 10, t_cycle % 10)
         t_sweep, stage = (t_stage // 100, t_stage % 100)
 
@@ -38,7 +38,7 @@ class Timer:
             self.time_dict["channel"] = ctx.message.channel
             self.bot.scheduler.remove_all_jobs()
             self.bot.scheduler.add_job(func=self.update_time,
-                                       trigger=IntervalTrigger(seconds=24000, start_date=self.time_dict["first_time"]),
+                                       trigger=IntervalTrigger(seconds=10800, start_date=self.time_dict["first_time"]),
                                        args=[self.time_dict["start_date"], self.time_dict["made_time"],
                                              self.time_dict["channel"]])
             await self.bot.responses.success()
