@@ -3,4 +3,3 @@ discordbot.py
 aiohttp
 websockets
 chardet
-discord.embeds
