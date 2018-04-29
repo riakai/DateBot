@@ -6,7 +6,7 @@
   },
   "credentials": {
     "token": "NDQwMjAyOTM4NTAyMzQ4ODEx.DcenoA.XOKT_8sjsE2NoxDzsVIZqAa1WLo",
-    "client_id": "Change this"
+    "client_id": "440202938502348811"
   },
   "cogs": [
     "commands.timer"
