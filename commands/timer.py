@@ -20,7 +20,7 @@ class Timer:
 
     def update_time(self, start, made, channel):
         time_diff = datetime.datetime.now() - start
-        t_cycle = time_diff.total_seconds() // 24000 + made
+        t_cycle = time_diff.total_seconds() // 10800 + made
         # A sweep is 100 stages, a stage is 10 cycles, and a cycle is 10800 seconds
         t_stage, cycle = (t_cycle // 10, t_cycle % 10)
         t_sweep, stage = (t_stage // 100, t_stage % 100)
