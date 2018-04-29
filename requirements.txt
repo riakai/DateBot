@@ -1,4 +1,2 @@
 discord.py
-aiohttp
-websockets
-chardet
+discordbot.py
