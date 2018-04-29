@@ -1,4 +1,4 @@
-import discord
+import discord.py
 import logging
 import logging.config
 import os
