@@ -1,6 +1,5 @@
 discord.py
 discordbot.py
-emptyembed
 aiohttp
 websockets
 chardet
