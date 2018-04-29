@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "owner": "99660967574532096",
+    "prefix": "~",
+    "description": "Change this"
+  },
+  "credentials": {
+    "token": "Change this",
+    "client_id": "Change this"
+  },
+  "cogs": [
+    "commands.timer"
+  ]
+}
