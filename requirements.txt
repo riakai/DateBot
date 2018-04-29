@@ -2,3 +2,4 @@ discordbot.py
 discord.py
 pytz
 apscheduler
+colorama
