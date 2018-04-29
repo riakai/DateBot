@@ -1,6 +1,6 @@
 discord.py
 discordbot.py
-embeds.py
+embeds
 aiohttp
 websockets
 chardet
